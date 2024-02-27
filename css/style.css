@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #FECD32;
+    --background-color: #F9F9F9;
+    --darkgray-color: #444444;
+    --lightgray-color: #DDDDDD;
+    --white-color: #FFFFFF;
+    --black-color: #202124;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background: url(../images/patten02.png);
+}
+
+.inner {
+    max-width: 140rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header {
+    border-bottom: 1px solid var(--black-color);
+    background: var(--white-color);
+}
+
+#header .inner {
+    max-width: 160rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#header .title_wrap {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 6rem;
+}
+
+.mainVisual .inner {
+    position: relative;
+    padding: 200px 0;
+}
+
+.mainVisual .tit {
+    margin: 0 0 3rem 0;
+}
+
+.mainVisual .tit p {
+    font-size: 18rem;
+}
+
+
+.mainVisual .tit p span {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    font-size: 0;
+    overflow: hidden;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.mainVisual .tit p em {
+    display: inline-block;
+    background: var(--black-color);
+    height: 10px;
+
+    vertical-align: middle;
+}
+
+/* .mainVisual .tit p span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--black-color);
+    transform: translate(0, -50%);
+}
+
+.mainVisual .tit p span::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--black-color);
+    transform: translate(0, -50%);
+} */
+
+.mainVisual .desc {
+    line-height: 2.4rem;
+}
+
+.mainVisual .animate-anything-css {
+    color: var(--primary-color);
+    position: absolute;
+    right: 0;
+    bottom: 200px;
+    font-size: 200px;
+}
