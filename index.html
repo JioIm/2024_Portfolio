@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
@@ -17,6 +18,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
     <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/fullpage.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/custom.js" defer></script>
 </head>
@@ -32,26 +34,103 @@
                 </div>
             </div>
         </header>
+        <div class="f_wrap">
+            <div class="sidebar">
+                <nav id="custom_nav" class="gnb">
+                    <ul>
+                        <li><a href="">01</a></li>
+                        <li><a href="">02</a></li>
+                        <li><a href="">03</a></li>
+                        <li><a href="">04</a></li>
+                        <li><a href="">05</a></li>
+                        <li><a href="">06</a></li>
+                        <li><a href="">Training</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <main id="main" class="main">
+                <section class="mainVisual section">
+                    <div class="inner content">
+                        <div class="tit">
+                            <p>DESIGN FROM</p>
+                            <br />
+                            <p>G<span><em></em></span>RID</p>
+                        </div>
+                        <div class="desc">
+                            <div class="clip"></div>
+                            <p>
+                                그리드에서부터 차근차근 시작하는 디자인<br />
+                                기본을 지키는 웹디자이너/퍼블리셔 Jey Im 입니다.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="portfolio section fp-auto-height-responsive">
+                    <h2 class="blind">portfolio</h2>
+                    <div class="inner_content">
+                        <div class="mockup">
+                            <figure>
+                                <img src="./images/mockup_example.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="desc">
+                            <div class="desc_tit">
+                                <strong data-tit="Bang&Olufsen">Bang&Olufsen</strong>
+                                <span>뱅앤올룹슨</span>
+                            </div>
+                            <div class="desc_info">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br />
+                                    Adipisci, cum. Eum dicta adipisci perspiciatis velit, fuga doloremque?
+                                    <br />Sapiente facere illum, tempore nam ad amet tempora totam omnis.
+                                </p>
+                                <div class="table">
+                                    <table class="desc_table">
+                                        <caption class="blind">option</caption>
+                                        <colgroup>
+                                            <col style="width:100px" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>TYPE</th>
+                                                <td>개인 작업 100%, 모바일 반응형 (768px)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>TOOLS</th>
+                                                <td>HTML5, SCSS, jQuery, Swiper</td>
+                                            </tr>
+                                            <tr>
+                                                <th>FONT</th>
+                                                <td>Pretendard, Google Material Icons</td>
+                                            </tr>
+                                            <tr>
+                                                <th>COLOR</th>
+                                                <td>lorn, icon, jquery</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="link">
+                                    <a href="" target="_blank">WEB</a>
+                                    <a href="" target="_blank">ORIGINAL</a>
+                                    <a href="" target="_blank">FIGMA</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <main id="content">
-            <section class="section mainVisual">
-                <div class="inner content">
-                    <div class="tit">
-                        <p>DESIGN FROM</p>
-                        <br />
-                        <p>G<span><em></em></span>RID</p>
-                    </div>
-                    <p class="desc">
-                        그리드에서부터 차근차근 시작하는 디자인<br />
-                        기본을 지키는 웹디자이너/퍼블리셔 Jey Im 입니다.
-                    </p>
-                    <div class="animate-anything-css">
-                        <p>*</p>
-                    </div>
+            </main>
+
+        </div>
+        <footer id="footer">
+            <div class="inner">
+                <div class="title_wrap">
+                    <span>© 2024</span>
+                    <h1>Jio Im's Portfolio</h1>
+                    <span>publisher / web designer</span>
                 </div>
-            </section>
-        </main>
-        <footer class="footer">
+            </div>
         </footer>
 
     </div>
