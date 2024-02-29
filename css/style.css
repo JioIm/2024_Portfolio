@@ -3,12 +3,13 @@
 }
 
 :root {
-    --primary-color: #FECD32;
-    --background-color: #F9F9F9;
-    --darkgray-color: #cccccc;
-    --lightgray-color: #DDDDDD;
+    --primary-color: #fcd503;
+    --secondary-color: #BFA995;
+    --background-color: #F2F2F2;
+    --darkgray-color: #404040;
+    --lightgray-color: #EFEFEF;
     --white-color: #FFFFFF;
-    --lightblack-color: #333333;
+    --lightblack-color: #262626;
     --black-color: #202124;
 }
 
@@ -28,10 +29,22 @@ body {
 }
 
 .inner_content {
-    max-width: 130rem;
+    max-width: 150rem;
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: space-between;
+    gap: 10rem;
+    justify-content: flex-start;
+}
+
+.inner_contents {
+    max-width: 150rem;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    gap: 10rem;
+    justify-content: flex-end;
 }
 
 #header {
@@ -95,30 +108,6 @@ body {
     vertical-align: middle;
 }
 
-/* .mainVisual .tit p span::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--black-color);
-    transform: translate(0, -50%);
-}
-
-.mainVisual .tit p span::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--black-color);
-    transform: translate(0, -50%);
-} */
-
 .mainVisual .desc {
     display: flex;
     align-items: center;
@@ -137,6 +126,12 @@ body {
 }
 
 
+
+
+
+
+
+
 .f_wrap {
     display: flex;
 }
@@ -146,10 +141,16 @@ body {
     background: var(--white-color);
     border-right: 1px solid var(--darkgray-color);
     transition: 0.5s;
+
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 }
 
-.f_wrap .sidebar .gnb {
-    margin: auto 0;
+.f_wrap .sidebar .custom_nav {
+    text-align: center;
 }
 
 .f_wrap.on .sidebar {
@@ -157,6 +158,26 @@ body {
     overflow: hidden;
 }
 
+.sidebar .custom_nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.sidebar .custom_nav ul li {
+    position: relative;
+    font-weight: 500;
+    padding: 0.8rem 0;
+}
+
+.custom_nav ul li.active {
+    border-radius: 0.4rem;
+    background: linear-gradient(to right, #EFEFEF, #fcd503);
+    margin: 0 auto;
+    padding: 0.8rem 0;
+    width: 14rem;
+    box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.25);
+}
 
 .f_wrap #main {
     transition: 0.5s;
@@ -165,18 +186,91 @@ body {
 
 .f_wrap.on #main {}
 
+
+
+
+
+
+
+
 .portfolio {
     align-items: center;
 }
 
-.portfolio figure {
+/* mockup1 */
+.portfolio .mockup {
+    perspective: 100rem;
+    position: relative;
     width: 80rem;
-    transform: translate(-64px, 10px);
 }
 
-.portfolio figure img {
-    width: 100%;
+.portfolio .mockup .frame_mac {
+    position: absolute;
+    width: 80rem;
+    height: 40rem;
+    transform: translate(0, -50%) rotate3d(0, 1, 0, 30deg);
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
 }
+
+.portfolio .mockup .frame_phone {
+    position: absolute;
+    width: 27rem;
+    height: 57rem;
+    transform: translate(30%, -40%);
+    left: 50%;
+    top: 50%;
+
+    overflow: hidden;
+
+    background: #E9E9E9;
+    box-shadow: -4px 3px 4px rgba(0, 0, 0, 0.25);
+    outline: 6px ridge var(--darkgray-color);
+    border-radius: 3.8rem;
+}
+
+/* mockup2 */
+
+.portfolio .mockup2 {
+    perspective: 100rem;
+    position: relative;
+    width: 80rem;
+}
+
+.portfolio .mockup2 .frame_mac {
+    position: absolute;
+    width: 80rem;
+    height: 40rem;
+    transform: translate(10%, -50%) rotate3d(0, 1, 0, -30deg);
+    left: 0;
+    top: 0;
+    overflow: hidden;
+
+    box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio .mockup2 .frame_phone {
+    position: absolute;
+    width: 27rem;
+    height: 57rem;
+    transform: translate(40%, -40%);
+    left: 0;
+    top: 50%;
+
+    overflow: hidden;
+
+    background: #E9E9E9;
+    box-shadow: -4px 3px 4px rgba(0, 0, 0, 0.25);
+    outline: 6px ridge var(--darkgray-color);
+    border-radius: 3.8rem;
+}
+
+
+
+
 
 .portfolio .desc_tit {
     margin: 0 0 1.6rem 0;
@@ -186,25 +280,24 @@ body {
     display: block;
     font-size: 6rem;
     font-weight: 600;
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 1.2rem 0;
 }
 
 .portfolio .desc_tit strong::before {
     content: attr(data-tit);
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 0;
     font-size: 50rem;
     color: #fff;
+    transform: translate(10%, 0);
     z-index: -1;
-
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25),
-        -3px -3px 10px rgba(255, 255, 255, 0.25);
+    text-shadow: 3px 3px 10px rgba(100, 100, 100, 0.15), -3px -3px 10px rgba(255, 255, 255, 0.15);
 }
 
 .portfolio .desc_tit span {
     display: block;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 .portfolio .desc_info {}
@@ -216,14 +309,77 @@ body {
 }
 
 .portfolio .desc_info .table {
-    /* border-top: 2px solid var(--primary-color); */
-    /* border-bottom: 2px solid var(--primary-color); */
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     background: var(--white-color);
+    margin: 0 0 2.4rem 0;
 }
 
 .portfolio .desc_info .table th {
-    padding: 1rem 0.8rem;
+    padding: 1.6rem 0.8rem;
 }
+
+.portfolio .desc_info .link {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.portfolio .desc_info .link a {
+    position: relative;
+    border-radius: 0.4rem;
+    padding: 0.8rem 2.8rem;
+
+    background: var(--white-color);
+    /* border: 1px solid var(--darkgray-color); */
+    box-shadow: inset 0px 0px 7px -3px rgba(100, 100, 100, 0.5);
+    z-index: 1;
+}
+
+.portfolio .desc_info .link a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--primary-color);
+    border-radius: 0.4rem;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.portfolio .desc_info .link a:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.portfolio .desc_info .link a:active {
+    top: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

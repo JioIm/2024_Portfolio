@@ -1,11 +1,11 @@
 $(function () {
 
     $('#main').fullpage({
-        anchors: ["p1", "p2", "p3", "p4", "p5"],
-        menu: '#custom_nav',
+        anchors: ["intro", "p1", "p2", "p3", "p4", "p5", "p6", "training", "contact"],
+        menu: '.custom_nav',
         scrollOverflow: false,
         navigation: true,
-        paddingTop: '40px',
+        // paddingTop: '40px',
 
         afterRender: () => {
             mainVisualLine();
@@ -15,10 +15,15 @@ $(function () {
             //destination.index === 0 && mainVisualLine();
             if (destination.index === 0) {
                 $('.f_wrap').addClass('on');
+                $('.custom_nav li').removeClass('active');
+
 
             } else {
-                $('.f_wrap').removeClass('on')
+                $('.f_wrap').removeClass('on');
+                $('.custom_nav li').eq(destination.index).addClass('active');
             }
+            // $('.custom_nav li').removeClass('active');
+            // $('.custom_nav li').addClass('active');
         },
 
         onLeave: function (origin, destination, direction, trigger) {
@@ -29,8 +34,17 @@ $(function () {
         responsiveWidth: 768,
         responsiveHeight: 800,
 
+
     });
+
+    $('.custom_nav li').click(function () {
+        var index = $(this).index() + 1;
+        $.fn.fullpage.moveTo(index);
+    });
+
+
 });
+
 
 
 
