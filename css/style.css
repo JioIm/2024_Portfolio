@@ -3,7 +3,8 @@
 }
 
 :root {
-    --primary-color: #fcd503;
+    /* --primary-color: #FFD200; */
+    --primary-color: #ff6d1f;
     --secondary-color: #BFA995;
     --background-color: #F2F2F2;
     --darkgray-color: #404040;
@@ -137,7 +138,7 @@ body {
 }
 
 .f_wrap .sidebar {
-    width: 200px;
+    width: 16rem;
     background: var(--white-color);
     border-right: 1px solid var(--darkgray-color);
     transition: 0.5s;
@@ -172,7 +173,7 @@ body {
 
 .custom_nav ul li.active {
     border-radius: 0.4rem;
-    background: linear-gradient(to right, #EFEFEF, #fcd503);
+    background: linear-gradient(to right, #EFEFEF, #ff5c00);
     margin: 0 auto;
     padding: 0.8rem 0;
     width: 14rem;
@@ -208,7 +209,9 @@ body {
     position: absolute;
     width: 80rem;
     height: 40rem;
-    transform: translate(0, -50%) rotate3d(0, 1, 0, 30deg);
+    transform: translate(0, -30%) rotate3d(0, 1, 0, 0);
+    border-radius: 10px;
+    filter: grayscale(1) brightness(0.8);
     left: 0;
     top: 0;
     overflow: hidden;
@@ -223,7 +226,6 @@ body {
     transform: translate(30%, -40%);
     left: 50%;
     top: 50%;
-
     overflow: hidden;
 
     background: #E9E9E9;
@@ -244,8 +246,11 @@ body {
     position: absolute;
     width: 80rem;
     height: 40rem;
-    transform: translate(10%, -50%) rotate3d(0, 1, 0, -30deg);
-    left: 0;
+    transform: translate(8%, -30%) rotate3d(0, 1, 0, 0);
+    border-radius: 10px;
+    filter: grayscale(1);
+    opacity: 50%;
+    right: 0;
     top: 0;
     overflow: hidden;
 
@@ -364,6 +369,86 @@ body {
 
 
 
+.training {
+    position: relative;
+}
+
+.training .inner {
+    max-width: 100%;
+    width: 100%;
+}
+
+.training .slide_menu {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.training .slide_menu>* {
+    flex: 1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.training .slide_menu>.itm {
+    position: relative;
+    border-right: 1px solid var(--darkgray-color);
+}
+
+.training .slide_menu>.itm h3 {
+    writing-mode: vertical-lr;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 6rem;
+    cursor: pointer;
+    padding: 10rem 0 0 0;
+}
+
+.training .slide_menu>.itm.on {
+    flex: 90%;
+}
+
+.training .slide_menu>.itm.on h3 {
+    writing-mode: horizontal-tb;
+    padding: 10rem 0 0 6rem;
+}
+
+.training .slide_menu>.itm.on .con_wrap {
+    display: block;
+}
+
+.training .slide_menu>.itm .con_wrap {
+    display: none;
+}
+
+.training .slide_menu>.itm .con_wrap .con_inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0 auto;
+    max-width: 152rem;
+    padding: 12rem 0;
+}
+
+.training .con_wrap .con_inner li {
+    display: flex;
+}
+
+.training .con_wrap .con_inner li .txt_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30rem;
+    padding: 0 2rem;
+    background: var(--lightgray-color);
+}
+
+.training .con_wrap .con_inner li .txt_box span {
+    display: block;
+    margin: 0 0 1.6rem 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
 
 
 

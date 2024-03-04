@@ -4,7 +4,7 @@ $(function () {
         anchors: ["intro", "p1", "p2", "p3", "p4", "p5", "p6", "training", "contact"],
         menu: '.custom_nav',
         scrollOverflow: false,
-        navigation: true,
+        navigation: false,
         // paddingTop: '40px',
 
         afterRender: () => {
@@ -42,6 +42,12 @@ $(function () {
         $.fn.fullpage.moveTo(index);
     });
 
+
+
+    $('.training .slide_menu>.itm').on('click', function (e) {
+        e.preventDefault();
+        $(this).addClass('on').siblings().removeClass('on');
+    });
 
 });
 
