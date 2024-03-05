@@ -4,9 +4,10 @@
 
 :root {
     /* --primary-color: #FFD200; */
-    --primary-color: #ff6d1f;
-    --secondary-color: #BFA995;
-    --background-color: #F2F2F2;
+    --primary-color: #1DADE9;
+    --secondary-color: #FC3E2E;
+    --third-color: #F5E6D3;
+    --background-color: #F2F5FC;
     --darkgray-color: #404040;
     --lightgray-color: #EFEFEF;
     --white-color: #FFFFFF;
@@ -30,22 +31,15 @@ body {
 }
 
 .inner_content {
-    max-width: 150rem;
+    max-width: 140rem;
     display: flex;
+    gap: 16rem;
     width: 100%;
     align-items: center;
-    gap: 10rem;
-    justify-content: flex-start;
 }
 
-.inner_contents {
-    max-width: 150rem;
-    display: flex;
+.inner2 {
     flex-direction: row-reverse;
-    width: 100%;
-    align-items: center;
-    gap: 10rem;
-    justify-content: flex-end;
 }
 
 #header {
@@ -59,7 +53,7 @@ body {
 }
 
 #header .inner {
-    max-width: 170rem;
+    max-width: 164rem;
     width: 100%;
     margin: 0 auto;
 }
@@ -70,7 +64,7 @@ body {
 
     font-size: 1.4rem;
     font-weight: 500;
-    line-height: 6rem;
+    line-height: 5rem;
     color: var(--lightblack-color);
 }
 
@@ -80,7 +74,8 @@ body {
 }
 
 .mainVisual .tit {
-    margin: 0 0 3rem 0;
+    margin: 0 0 4rem 0;
+    color: var(--black-color);
 }
 
 .mainVisual .tit p {
@@ -138,7 +133,7 @@ body {
 }
 
 .f_wrap .sidebar {
-    width: 16rem;
+    width: 14rem;
     background: var(--white-color);
     border-right: 1px solid var(--darkgray-color);
     transition: 0.5s;
@@ -172,11 +167,10 @@ body {
 }
 
 .custom_nav ul li.active {
-    border-radius: 0.4rem;
-    background: linear-gradient(to right, #EFEFEF, #ff5c00);
+    background: var(--primary-color);
     margin: 0 auto;
     padding: 0.8rem 0;
-    width: 14rem;
+    width: 12rem;
     box-shadow: 0px 1px 2px rgba(50, 50, 50, 0.25);
 }
 
@@ -184,8 +178,6 @@ body {
     transition: 0.5s;
     flex: 1;
 }
-
-.f_wrap.on #main {}
 
 
 
@@ -200,7 +192,6 @@ body {
 
 /* mockup1 */
 .portfolio .mockup {
-    perspective: 100rem;
     position: relative;
     width: 80rem;
 }
@@ -209,7 +200,7 @@ body {
     position: absolute;
     width: 80rem;
     height: 40rem;
-    transform: translate(0, -30%) rotate3d(0, 1, 0, 0);
+    transform: translate(0, -40%) rotate3d(0, 1, 0, 0);
     border-radius: 10px;
     filter: grayscale(1) brightness(0.8);
     left: 0;
@@ -223,21 +214,20 @@ body {
     position: absolute;
     width: 27rem;
     height: 57rem;
-    transform: translate(30%, -40%);
+    transform: translate(30%, -50%);
     left: 50%;
     top: 50%;
     overflow: hidden;
 
     background: #E9E9E9;
     box-shadow: -4px 3px 4px rgba(0, 0, 0, 0.25);
-    outline: 6px ridge var(--darkgray-color);
+    outline: 3px ridge var(--darkgray-color);
     border-radius: 3.8rem;
 }
 
 /* mockup2 */
 
 .portfolio .mockup2 {
-    perspective: 100rem;
     position: relative;
     width: 80rem;
 }
@@ -246,10 +236,9 @@ body {
     position: absolute;
     width: 80rem;
     height: 40rem;
-    transform: translate(8%, -30%) rotate3d(0, 1, 0, 0);
+    transform: translate(0, -40%) rotate3d(0, 1, 0, 0);
     border-radius: 10px;
-    filter: grayscale(1);
-    opacity: 50%;
+    filter: grayscale(1) brightness(0.8);
     right: 0;
     top: 0;
     overflow: hidden;
@@ -261,21 +250,20 @@ body {
     position: absolute;
     width: 27rem;
     height: 57rem;
-    transform: translate(40%, -40%);
+    transform: translate(20%, -50%);
     left: 0;
     top: 50%;
 
     overflow: hidden;
-
     background: #E9E9E9;
     box-shadow: -4px 3px 4px rgba(0, 0, 0, 0.25);
-    outline: 6px ridge var(--darkgray-color);
+    outline: 3px ridge var(--darkgray-color);
     border-radius: 3.8rem;
 }
 
-
-
-
+.portfolio .desc {
+    flex: 1;
+}
 
 .portfolio .desc_tit {
     margin: 0 0 1.6rem 0;
@@ -305,8 +293,6 @@ body {
     font-size: 2rem;
 }
 
-.portfolio .desc_info {}
-
 .portfolio .desc_info p {
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -315,7 +301,6 @@ body {
 
 .portfolio .desc_info .table {
     border-top: 2px solid var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
     background: var(--white-color);
     margin: 0 0 2.4rem 0;
 }
@@ -326,17 +311,16 @@ body {
 
 .portfolio .desc_info .link {
     display: flex;
-    gap: 2rem;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
 }
 
 .portfolio .desc_info .link a {
     position: relative;
     border-radius: 0.4rem;
-    padding: 0.8rem 2.8rem;
-
-    background: var(--white-color);
-    /* border: 1px solid var(--darkgray-color); */
+    padding: 0.8rem 4rem;
+    color: var(--white-color);
+    background: var(--darkgray-color);
     box-shadow: inset 0px 0px 7px -3px rgba(100, 100, 100, 0.5);
     z-index: 1;
 }
@@ -376,6 +360,7 @@ body {
 .training .inner {
     max-width: 100%;
     width: 100%;
+    align-items: center;
 }
 
 .training .slide_menu {
@@ -423,31 +408,44 @@ body {
 
 .training .slide_menu>.itm .con_wrap .con_inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     margin: 0 auto;
     max-width: 152rem;
-    padding: 12rem 0;
+    padding: 2.4rem 0;
 }
 
 .training .con_wrap .con_inner li {
     display: flex;
+    flex-direction: column;
+}
+
+.training .con_wrap .con_inner li .img_box {
+    width: 50rem;
+    height: 24rem;
+    border: 1px solid var(--darkgray-color);
+    margin: 0 0 2rem 0;
 }
 
 .training .con_wrap .con_inner li .txt_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 30rem;
     padding: 0 2rem;
-    background: var(--lightgray-color);
+    background: var(--white-color);
 }
 
 .training .con_wrap .con_inner li .txt_box span {
     display: block;
     margin: 0 0 1.6rem 0;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     font-weight: 600;
+}
+
+.training .con_wrap .con_inner li .txt_box p {
+    line-height: 2rem;
+    margin: 0 0 1.8rem 0;
+    white-space: nowrap;
 }
 
 
@@ -484,7 +482,7 @@ body {
 }
 
 #footer .inner {
-    max-width: 170rem;
+    max-width: 164rem;
     width: 100%;
     margin: 0 auto;
 }
