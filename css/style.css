@@ -371,6 +371,23 @@ body {
 
 
 
+.system {}
+
+.system .inner_content {
+    display: flex;
+}
+
+.system .inner_content {
+    display: flex;
+}
+
+.system .left {
+    flex: 1;
+}
+
+.system .right {
+    flex: 1;
+}
 
 
 

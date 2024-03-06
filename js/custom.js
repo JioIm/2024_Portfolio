@@ -1,7 +1,7 @@
 $(function () {
 
     $('#main').fullpage({
-        anchors: ["intro", "p1", "p2", "p3", "p4", "p5", "p6", "graphic", "system", "training", "contact"],
+        anchors: ["intro", "p1", "p2", "p3", "p4", "p5", "p6", "graphic", "system", "training", "profile"],
         menu: '.custom_nav',
         scrollOverflow: false,
         navigation: false,
