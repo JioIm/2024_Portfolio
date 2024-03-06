@@ -569,6 +569,223 @@ body {
 
 
 
+.profile {
+    position: relative;
+}
+
+.profile figure {
+    font-size: 0;
+}
+
+.profile img {
+    width: 100%;
+}
+
+.profile h2:after {
+    display: none;
+}
+
+.profile .box:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.profile .box>div {
+    float: left;
+}
+
+.profile .profile01 {
+    width: 33.333333%;
+    padding: 0 15px;
+}
+.profile .prof-wrap {
+    width: 350px;
+    border-right: 1px solid #ccc;
+}
+
+.profile .prof {
+    width: 300px;
+}
+
+.profile .prof-wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.profile .profile02 {
+    width: 66.666666%;
+}
+
+.profile .profile02 .prf02-left {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+}
+
+.profile .profile02 .prf02-right {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+}
+
+.profile .prf02-bottom {
+    padding: 20px 15px 0;
+}
+
+.profile .photo {
+    width: 30rem;
+    height: 36rem;
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--lightblack-color);
+    border-radius: 50%
+}
+
+.profile .photo .my-photo {
+    overflow: hidden;
+    width: 30rem;
+        height: 36rem;
+    border-radius: 50%
+}
+
+.profile .photo .line-pro {
+    position: absolute;
+    width: 100px;
+    bottom: 20px;
+    right: 0px;
+    z-index: 1;
+    transform: rotate(-30deg);
+}
+
+.profile .profile01 h3 {
+    text-align: center;
+    padding-top: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #666;
+    position: relative
+}
+
+.profile .profile01 h3:before {
+    content: '"';
+    color: #fdd28b;
+    font-family: 'MapoGoldenPier';
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 130px);
+}
+
+.profile .profile01 h3:after {
+    content: '"';
+    color: #fdd28b;
+    font-family: 'MapoGoldenPier';
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    left: calc(50% + 130px);
+}
+
+.profile .name {
+    padding-bottom: 10px;
+    padding-top: 35px;
+    padding: 35px 90px 10px;
+}
+
+.profile .name:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.profile .name h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    line-height: 30px;
+    text-align: center;
+    float: left;
+}
+
+.profile .name span {
+    font-weight: 300;
+    float: right;
+    line-height: 30px;
+}
+
+.profile .info li {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+}
+
+.profile .info li>i {
+    margin-right: 10px;
+}
+
+.profile .int-item {
+    width: 25%;
+    padding: 10px 5px 0;
+    float: left;
+}
+
+.profile .int-item p {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+    color: #333;
+    font-weight: 300;
+}
+
+.profile figure {
+    width: 100%;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profile .text {
+    padding-bottom: 45px;
+}
+
+.profile .text:last-child {
+    padding-bottom: 0px;
+}
+
+.profile .text h2 {
+    font-size: 20px;
+    color: #333;
+    line-height: 30px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.profile .text li {
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+.profile .text strong {
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    padding: 5px 0;
+    margin-right: 5px;
+}
+
+
+
+
 
 
 
